@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+</head>
+<body>
+    <div>
+        <p>Enter First Number</p>
+        <input id="first-number" type="number">
+    </div>
+    <div>
+        <p>Enter Second Number</p>
+        <input id="second-number" type="number">
+    </div>
+    <div class="sum">
+        <p>Sum</p>
+        <input id="sum" type="number">
+    </div>
+    <button onclick="cb()">Add</button>
+    <script>
+        const sum = document.getElementById('sum')
+        const first = document.getElementById('first-number')
+        const second = document.getElementById('second-number')
+        function cb(){
+            sum.value = parseInt(first.value) + parseInt(second.value)
+        }
+    </script>
+</body>
+</html>
