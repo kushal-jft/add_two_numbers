@@ -15,7 +15,7 @@
         <p>Enter Second Number</p>
         <input id="second-number" type="number">
     </div>
-    <div class="sum">
+    <div >
         <p>Sum</p>
         <input id="sum" type="number">
     </div>
@@ -24,8 +24,17 @@
         const sum = document.getElementById('sum')
         const first = document.getElementById('first-number')
         const second = document.getElementById('second-number')
+
         function cb(){
-            sum.value = parseInt(first.value) + parseInt(second.value)
+            // console.log(typeof first.value);
+            const a = parseInt(first.value) 
+            const b = parseInt(second.value)
+            // console.log(a, b)
+            if(isNaN(a)|| isNaN(b)){
+                alert("Invalid Input")
+                return;
+            }
+            sum.value = a+b
         }
     </script>
 </body>
